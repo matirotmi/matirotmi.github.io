@@ -3,6 +3,8 @@ import React, { useState, useEffect  } from 'react';
 import { Menu, X } from 'lucide-react';
 import '../styles/NavBar.css';
 
+//TODO NAV BAR DESAPARECE CUANDO SCROLEO PARA ABAJO Y APARECE CUANDO SCROLEO PARA ARRIBA
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

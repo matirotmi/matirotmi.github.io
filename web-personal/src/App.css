@@ -12,25 +12,25 @@ section {
 }
 
 #hero {
-  background-color: #d1d1d1;
+  background-color: transparent;
 }
 
 #about {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 #education {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 #experience {
-  background-color: #d1d1d1;
+  background-color: transparent;
 }
 
 #skills {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 #footer {
-  background-color: #d1d1d1;
+  background-color: transparent;
 }

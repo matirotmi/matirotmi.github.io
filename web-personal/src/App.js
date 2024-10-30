@@ -1,10 +1,13 @@
 import './App.css';
 import Navbar from './sections/NavBar';
 import About from './sections/AboutMe';
-import Experience from './sections/Experience';
 import Skills from './sections/Skills';
 import Footer from './sections/Footer';
 import HeroSection from './sections/HeroSection';
+import ExperienceCarousel from './sections/ExperienceCarousel';
+
+//TODO ELEGIR COLORES o IMAGEN de fondo, se ve todo muy blanco
+//TO DO ELEGIR UNA BUENA TIPOGRAFIA
 
 function App() {
   return (
@@ -13,7 +16,7 @@ function App() {
       <main>
         <section id="hero"><HeroSection /></section>
         <section id="about"><About /></section>
-        <section id="experience"><Experience /></section>
+        <section id="experience"><ExperienceCarousel /></section>
         <section id="skills"><Skills /></section>
         <section id="footer"><Footer /></section>
       </main>
