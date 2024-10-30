@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       <Navbar />
       <main>
-        <section id=""><HeroSection /></section>
+        <section id="hero"><HeroSection /></section>
         <section id="about"><About /></section>
         <section id="experience"><Experience /></section>
         <section id="skills"><Skills /></section>

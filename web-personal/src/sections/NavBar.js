@@ -1,21 +1,30 @@
 // components/Navbar/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Menu, X } from 'lucide-react';
 import '../styles/NavBar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { title: 'About', href: '#about' },
-    { title: 'Education', href: '#education' },
     { title: 'Experience', href: '#experience' },
     { title: 'Skills', href: '#skills' }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
-      <div className="nav-brand">Portafolio website</div>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-brand ">Portafolio website</div>
       
       {/* Desktop Navigation */}
       <div className="nav-links-desktop">

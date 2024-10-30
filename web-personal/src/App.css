@@ -1,6 +1,5 @@
 /* App.css */
 .app {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -12,8 +11,12 @@ section {
   padding: 4rem 0;
 }
 
-#about {
+#hero {
   background-color: #d1d1d1;
+}
+
+#about {
+  background-color: #ffffff;
 }
 
 #education {

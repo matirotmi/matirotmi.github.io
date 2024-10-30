@@ -7,7 +7,9 @@ const HeroSection = () => {
     <section id="home" className="hero-section">
       <h1>Matias Rotmistrovsky</h1>
       <h2>Software developer</h2>
+      <a href= '#about'>
       <ChevronDown className="scroll-indicator" size={32} />
+      </a>
     </section>
   );
 };
