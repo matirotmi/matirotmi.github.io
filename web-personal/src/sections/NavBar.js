@@ -1,33 +1,44 @@
-// components/Navbar/Navbar.jsx
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import '../styles/NavBar.css';
-
-//TODO NAV BAR DESAPARECE CUANDO SCROLEO PARA ABAJO Y APARECE CUANDO SCROLEO PARA ARRIBA
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const navItems = [
-    { title: 'About', href: '#about' },
-    { title: 'Experience', href: '#experience' },
-    { title: 'Skills', href: '#skills' }
-  ];
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollPos = window.scrollY;
+      
+      // Determinar si el scroll es hacia arriba o abajo
+      const isScrollingDown = currentScrollPos > prevScrollPos;
+      
+      // Actualizar la visibilidad basada en la dirección del scroll
+      setIsVisible(!isScrollingDown || currentScrollPos < 10);
+      
+      // Actualizar el estado de scroll para el efecto de fondo
+      setIsScrolled(currentScrollPos > 50);
+      
+      // Guardar la posición actual para la siguiente comparación
+      setPrevScrollPos(currentScrollPos);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [prevScrollPos]); // Incluimos prevScrollPos en las dependencias
+
+  const navItems = [
+    { title: 'Home', href: '#hero' },
+    { title: 'About', href: '#about' },
+    { title: 'Experience', href: '#experience' },
+    { title: 'Skills', href: '#skills' },
+    { title: 'Contact', href: '#footer' }
+  ];
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="nav-brand ">Portafolio website</div>
-      
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isVisible ? 'visible' : 'hidden'}`}>
       {/* Desktop Navigation */}
       <div className="nav-links-desktop">
         {navItems.map(item => (
