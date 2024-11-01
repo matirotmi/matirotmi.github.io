@@ -1,3 +1,4 @@
+
 /* components/Navbar/Navbar.css */
 .navbar {
   position: fixed;
@@ -13,6 +14,7 @@
   z-index: 1000;
   transform: translateY(0);
   transition: transform 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(8px);
 }
 
 .navbar.hidden {
@@ -36,17 +38,71 @@
 
 .nav-links-desktop a {
   text-decoration: none;
-  color: #333;
+  color: #2d2d2d;
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+
+.nav-links-desktop a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2d2d2d;
+  transition: width 0.2s ease;
 }
 
 .nav-links-desktop a:hover {
-  color: #007bff;
+  color: #000;
 }
 
+.nav-links-desktop a:hover::after {
+  width: 100%;
+}
+
+/* Estilos del botón de menú móvil */
 .mobile-menu-btn {
   display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2d2d2d;
+  padding: 0.5rem;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-icon-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.menu-icon,
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon.hidden,
+.close-icon.hidden {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.menu-icon.visible,
+.close-icon.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 .nav-links-mobile {
@@ -113,7 +169,7 @@ html {
   }
 
   .nav-links-mobile a:hover {
-    color: #007bff;
+    color: #000;
   }
 }
 

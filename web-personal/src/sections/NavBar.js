@@ -48,7 +48,10 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X /> : <Menu />}
+        <div className="menu-icon-container">
+          <Menu className={`menu-icon ${isOpen ? 'hidden' : 'visible'}`} />
+          <X className={`close-icon ${isOpen ? 'visible' : 'hidden'}`} />
+        </div>
       </button>
       
       {isOpen && (
