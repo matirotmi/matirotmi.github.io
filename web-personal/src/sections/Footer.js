@@ -1,6 +1,6 @@
 // components/Footer/Footer.jsx
 import React from 'react';
-import { Linkedin, Mail, Phone } from 'lucide-react';
+import { Linkedin, Mail, Phone, Github } from 'lucide-react';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -18,6 +18,10 @@ const Footer = () => {
         <a href="tel:+1134355034">
           <Phone className="icon" />
           <span>Phone</span>
+        </a>
+        <a href="">
+          <Github className="icon" />
+          <span>Github</span>
         </a>
       </div>
     </footer>
