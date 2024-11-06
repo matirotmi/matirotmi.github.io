@@ -7,43 +7,43 @@ const ExperienceCarousel = () => {
     {
       company: 'MAIN | Digital & Trade Marketing | Information Technology',
       role: 'IT Trainee',
-      period: 'Agosto 2021 - Diciembre 2021',
-      description: 'Crear chatbots para los diferentes sitios web de los clientes, adaptándose a las necesidades de cada cliente.',
+      period: 'August 2021 - December 2021',
+      description: 'Create chat bots for diferent client websites, adapting to each clients needs and optimize of daily operations',
       technologies: ['Microsoft Excel', 'Javascript', 'HTML', 'CSS', 'Bots']
     },
     {
       company: 'Andreani Grupo Logistico ',
-      role: 'Pasante',
-      period: 'Diciembre 2021 - Junio 2022',
-      description: 'Desarrollo de nuevas funcionalidades y mantenimiento de aplicaciones web tanto en el Frontend como en el Backend.',
+      role: 'Intern',
+      period: 'December 2021 - June 2022',
+      description: 'Development of new functionalities and maintenance of web applications both in the Frontend and the Backend',
       technologies: ['Javascript', 'Typescript', 'React.js', 'Redux', 'Next.js', 'SQL', 'C# .Net', 'RestAPI', 'Microservices']
     },
     {
       company: 'Andreani Grupo Logistico ',
-      role: 'Desarrollador Jr',
-      period: 'Junio 2022 - Diciembre 2022',
-      description: 'Desarrollo de nuevas funcionalidades y mantenimiento de aplicaciones web tanto en el Frontend como en el Backend.',
+      role: 'Jr Developer',
+      period: 'June 2022 - December 2022',
+      description: 'Development of new functionalities and maintenance of web applications both in the Frontend and the Backend',
       technologies: ['Javascript', 'Typescript', 'React.js', 'Redux', 'Next.js', 'SQL', 'C# .Net', 'RestAPI', 'Microservices']
     },
     {
-      company: 'Oracle | Pasante GenO',
-      role: 'Pasante GenO',
-      period: 'Agosto 2023 - Diciembre 2023',
+      company: 'Oracle',
+      role: 'Intern | GenO Experience',
+      period: 'August 2023 - December 2023',
       description: 'Como pasante en Oracle fui rotando por las distintas areas que tiene la empresa desempenando una gran variedad de roles lo que me dio un gran panorama general de la ampresa.',
       technologies: ['Oracle OCI']
     },
     {
       company: 'University of Palermo',
-      role: 'Profesor asistente',
-      period: 'Marzo 2023 - Marzo 2024',
-      description: 'Dar apoyo docente en las clases de introduccion a la programacion, donde se les da a los alumnos el primer acercamiento a los alumnos en la programacion',
+      role: 'Assistant Professor',
+      period: 'March 2023 - March 2024',
+      description: 'Teach classes, grade papers, and give assitance to the professor and the students',
       technologies: ['Python', 'Teaching', 'Comunication']
     },
     {
       company: 'Qaracter',
       role: 'Software Developer',
-      period: 'Enero 2024 - Diciembre 2024',
-      description: 'Desarrollo y mantenimiento de microservicios en sistemas bancarios usando Java Springboot',
+      period: 'January 2024 - December 2024',
+      description: 'Develop new functionalities and perform maintenance on banking systems',
       technologies: ['SQL', 'PL/SQL', 'Java', 'Springboot', 'Hibernate', 'Cucumber']
     },
   ];

@@ -37,7 +37,6 @@ const SkillsSection = () => {
     testing: [
       { name: 'Mocha', icon: <SiMocha className="tech-icon" style={{ color: '#8D6748' }} /> },
       { name: 'Cucumber', icon: <SiCucumber className="tech-icon" style={{ color: '#23D96C' }} /> },
-      { name: 'React Testing Library', icon: <SiTestinglibrary className="tech-icon" style={{ color: '#E33332' }} /> },
       { name: 'Selenium', icon: <SiSelenium className="tech-icon" style={{ color: '#43B02A' }} /> }
     ]
   };

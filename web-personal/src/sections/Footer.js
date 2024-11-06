@@ -19,7 +19,7 @@ const Footer = () => {
           <Phone className="icon" />
           <span>Phone</span>
         </a>
-        <a href="">
+        <a href="https://github.com/matirotmi">
           <Github className="icon" />
           <span>Github</span>
         </a>
