@@ -1,0 +1,185 @@
+
+/* components/Navbar/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  z-index: 1000;
+  transform: translateY(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.visible {
+  transform: translateY(0);
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links-desktop {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.nav-links-desktop a {
+  text-decoration: none;
+  color: #2d2d2d;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.2s ease;
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+
+.nav-links-desktop a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2d2d2d;
+  transition: width 0.2s ease;
+}
+
+.nav-links-desktop a:hover {
+  color: #000;
+}
+
+.nav-links-desktop a:hover::after {
+  width: 100%;
+}
+
+/* Estilos del botón de menú móvil */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2d2d2d;
+  padding: 0.5rem;
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.menu-icon-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.menu-icon,
+.close-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon.hidden,
+.close-icon.hidden {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.menu-icon.visible,
+.close-icon.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+/* Smooth scroll behavior for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+
+  .nav-links-desktop {
+    display: none;
+    justify-content: right;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-menu-btn:hover {
+    transform: scale(1.1);
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform-origin: top;
+    animation: slideDown 0.3s ease;
+    align-items: inherit;
+  }
+
+  .nav-links-mobile a {
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links-mobile a:hover {
+    color: #000;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+/* components/Education/Education.css */
+.education-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .university-logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  .education-details {
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .education-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }

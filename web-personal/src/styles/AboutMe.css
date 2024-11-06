@@ -1,0 +1,105 @@
+/* AboutMe.css */
+/* Existing styles */
+.about-section {
+  padding: 6rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* New styles for image flip effect */
+.profile-card {
+  width: 270px;
+  height: 270px;
+  perspective: 1000px;
+}
+
+.profile-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.profile-card:hover .profile-card-inner {
+  transform: rotateY(180deg);
+}
+
+.profile-card-front, .profile-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.profile-card-front {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card-front img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile-card-back {
+  background-color: #77787a;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  align-items: center;
+}
+
+.about-btn {
+  background-color: white;
+  color: #77787a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.about-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column-reverse;
+  }
+}

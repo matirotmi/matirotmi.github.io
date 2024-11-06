@@ -1,0 +1,140 @@
+/* Card Styles */
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+
+.experience-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transform: translateX(0);
+    transition: all 500ms ease-in-out;
+  }
+  
+  .content-wrapper {
+    transform: translateX(0);
+    transition: all 500ms ease-in-out;
+    opacity: 1;
+  }
+  
+  .description {
+    color: #475569;
+    margin-bottom: 1.5rem;
+    transform: translateX(0);
+    transition: all 500ms ease-in-out;
+  }
+  
+  /* Technology Tags */
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    padding: 0.25rem 0.75rem;
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.875rem;
+    border-radius: 9999px;
+    transition: all 300ms ease-in-out;
+  }
+  
+  .tech-tag:hover {
+    background-color: #e2e8f0;
+    transform: scale(1.05);
+  }
+  
+  /* Navigation */
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-button {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    transition: all 300ms ease-in-out;
+    transform: scale(1);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-button:hover:not(:disabled) {
+    background-color: #f1f5f9;
+    transform: scale(1.05);
+  }
+  
+  .nav-button:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+  
+  .nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .pagination {
+    font-size: 0.875rem;
+    color: #475569;
+    transition: all 300ms ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    51% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideRight {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(10%);
+      opacity: 0;
+    }
+    51% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-slideLeft {
+    animation: slideLeft 500ms ease-in-out;
+  }
+  
+  .animate-slideRight {
+    animation: slideRight 500ms ease-in-out;
+  }
