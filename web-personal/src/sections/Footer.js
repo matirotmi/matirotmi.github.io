@@ -15,7 +15,7 @@ const Footer = () => {
           <Linkedin className="icon" />
           <span>LinkedIn</span>
         </a>
-        <a href="tel:+1134355034">
+        <a href="tel:+5491134355934">
           <Phone className="icon" />
           <span>Phone</span>
         </a>

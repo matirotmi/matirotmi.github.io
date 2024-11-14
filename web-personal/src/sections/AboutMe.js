@@ -3,6 +3,14 @@ import { GraduationCap } from 'lucide-react';
 import '../styles/AboutMe.css';
 
 const AboutMe = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/MatíasRotmistrovskyCV.pdf"; // Cambia por la URL de tu PDF
+    link.download = "MatíasRotmistrovskyCV.pdf"; // Nombre con el que se descargará
+    link.click();
+  };
+
   return (
     <section id="about" className="about-section">
       <div className="about-content">
@@ -31,7 +39,7 @@ const AboutMe = () => {
                 <img src="fotoMati.jpeg" alt="Profile" />
               </div>
               <div className="profile-card-back">
-                <button className="about-btn">Download CV</button>
+                <button className="about-btn" onClick={handleDownload}>Download CV</button>
               </div>
             </div>
           </div>
