@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/matirotmiwebsite/static/css/main.32724bb1.css",
-    "main.js": "/matirotmiwebsite/static/js/main.84a8001f.js",
+    "main.js": "/matirotmiwebsite/static/js/main.9732bbff.js",
     "index.html": "/matirotmiwebsite/index.html",
     "main.32724bb1.css.map": "/matirotmiwebsite/static/css/main.32724bb1.css.map",
-    "main.84a8001f.js.map": "/matirotmiwebsite/static/js/main.84a8001f.js.map"
+    "main.9732bbff.js.map": "/matirotmiwebsite/static/js/main.9732bbff.js.map"
   },
   "entrypoints": [
     "static/css/main.32724bb1.css",
-    "static/js/main.84a8001f.js"
+    "static/js/main.9732bbff.js"
   ]
 }
