@@ -6,8 +6,9 @@ const AboutMe = () => {
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/MatíasRotmistrovskyCV.pdf"; // Cambia por la URL de tu PDF
-    link.download = "MatíasRotmistrovskyCV.pdf"; // Nombre con el que se descargará
+    // Use process.env.PUBLIC_URL to get the correct base path
+    link.href = `${process.env.PUBLIC_URL}/MatíasRotmistrovskyCV.pdf`;
+    link.download = "MatíasRotmistrovskyCV.pdf";
     link.click();
   };
 
